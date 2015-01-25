@@ -1,0 +1,15 @@
+h1 {
+	text-shadow: none;
+	color: maroon;
+}
+
+.app-header {
+	background-color: #FFAE00 !important;
+}
+
+.upload-button-container {
+	position: absolute;
+	right: 10px;
+	z-index: 5;
+	top: 0px;
+}

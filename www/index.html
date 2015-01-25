@@ -17,18 +17,23 @@
 
 		<!-- Include the jQuery Mobile library -->
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/globalStyles.css" />
+		<script type="text/javascript" src="js/MimicMeEmojiApp.js"></script>
         <title></title>
     </head>
     <body>
             <div data-role="page" id="home">
-			  <div data-role="header">
+			  <div data-role="header" class="app-header">
 				<h1>Mimic Me Emoji</h1>
+				<div class="upload-button-container">
+					<a href="#upload" data-transition="slide"
+							class="ui-btn ui-corner-all ui-shadow ui-icon-camera ui-btn-icon-right ui-btn-icon-notext">Mimic Me Emoji</a>
+				</div>
 				<div data-role="navbar">
 				  <ul>
-					<li><a href="#home">Feed</a></li>
+					<li><a href="#">Recent</a></li>
 					<li>
-						<a href="#upload" data-transition="slide">Upload</a>
+						<a href="#">Hot</a>
 					</li>
 				  </ul>
 				</div>
@@ -40,15 +45,15 @@
 			</div>
 			
 			<div data-role="page" id="upload">
-				<div data-role="header">
-					<a href="#home" data-transition="slide" data-direction="reverse" class="ui-btn ui-corner-all ui-shadow ui-icon-carat-l ui-btn-icon-left">Back</a>
+				<div data-role="header" class="app-header">
+					<a href="#home" data-transition="slide" data-direction="reverse"
+						class="ui-btn ui-corner-all ui-shadow ui-icon-carat-l ui-btn-icon-left ui-btn-icon-notext"></a>
 					<h1>Mimic Me Emoji</h1>
-					
 				</div>
-				
+			
 				 <div data-role="main" class="ui-content">
-				<p>Camera stuff</p>
-			  </div>
+					<p>Camera stuff</p>
+				</div>
 			</div>
     </body>
 </html>
