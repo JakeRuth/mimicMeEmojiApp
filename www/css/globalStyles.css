@@ -1,10 +1,5 @@
-h1 {
-	text-shadow: none;
-	color: maroon;
-}
-
-.app-header {
-	background-color: #FFAE00 !important;
+a.button-icon {
+	background-color: darkcyan !important;
 }
 
 .upload-button-container {
