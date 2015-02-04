@@ -22,6 +22,7 @@
 		<!-- include handlebars -->
 		<script type="text/javascript" src="js/handlebars-v2.0.0.js"></script>
 		<script type="text/javascript" src="js/MimicMeEmojiApp.js"></script>
+		<script type="text/javascript" src="js/cameraAPI.js"></script>
         <title></title>
     </head>
     <body>
@@ -60,6 +61,10 @@
 			
 				 <div data-role="main" class="ui-content">
 					<p>Camera stuff</p>
+					 <button class="ui-btn" onclick="capturePhoto();">Take a Picture</button>
+					 <div style="text-align:center;margin:20px;">
+						<img id="cameraPic" src="" style="width:auto;height:120px;"></img>
+					</div>
 				</div>
 			</div>
 
