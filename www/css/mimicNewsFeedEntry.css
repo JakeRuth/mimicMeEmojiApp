@@ -1,0 +1,61 @@
+tr, td, tbody {
+    max-height: 165px !important;
+    min-height: 165px !important;
+}
+
+tr {
+    border-bottom: solid;
+    border-color: #205274;
+}
+
+p, h4 {
+    margin: 0px;
+    text-align: center;
+}
+
+td {
+    display: inline-block !important;
+    float: none !important;
+    clear: none !important;
+}
+
+.mimic-image {
+    width: 31% !important;
+}
+
+.mimic-info {
+    width: 42% !important;
+    position: relative;
+}
+
+.mimic-name {
+    font-weight: bold;
+}
+
+.mimic-description {
+    text-align: left;
+    font-size: 14px;
+    padding-top: 11px;
+}
+
+.mimic-views {
+    position: absolute;
+    bottom: 13px;
+    right: 31px;
+}
+
+.mimic-votes {
+    width: 17% !important;
+}
+
+.mimic-thumbnail {
+    height: 143px;
+}
+
+.mimic-ups {
+    color: limegreen !important;
+}
+
+.mimic-downs {
+    color: red !important;
+}

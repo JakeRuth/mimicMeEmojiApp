@@ -17,6 +17,7 @@
 	    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> 
 
 		<link rel="stylesheet" type="text/css" href="css/globalStyles.css" />
+        <link rel="stylesheet" type="text/css" href="css/mimicNewsFeedEntry.css" />
 		
 		<!-- include handlebars -->
 		<script type="text/javascript" src="js/handlebars-v2.0.0.js"></script>
@@ -44,7 +45,9 @@
 			  </div>
 
 			  <div data-role="main" class="ui-content">
-				<p>Content..</p>
+                  <table id="news-feed" data-role="table" class="ui-responsive">
+                        <!--handlebars templating used here with js-->
+                  </table>
 			  </div>
 			</div>
 			
@@ -59,5 +62,27 @@
 					<p>Camera stuff</p>
 				</div>
 			</div>
+
+            <!-- Handlebars templates -->
+            <script id="news-feed-template" type="text/x-handlebars-template">
+                <tbody>
+                    <tr>
+                        <td class="mimic-image">
+                            <img class="mimic-thumbnail" src="{{thumbnailFilePath}}" />
+                        </td>
+                        <td class="mimic-info">
+                            <p class="mimic-name">{{username}}</p>
+                            <p class="mimic-description">{{description}}</p>
+                            <p class="mimic-views">Views: {{views}}</p>
+                        </td>
+                        <td class="mimic-votes">
+                            <a class="ui-btn ui-corner-all ui-shadow ui-icon-carat-u ui-btn-icon-notext button-icon"></a>
+                            <h4 class="mimic-ups">+{{ups}}</h4>
+                            <h4 class="mimic-downs">-{{downs}}</h4>
+                            <a class="ui-btn ui-corner-all ui-shadow ui-icon-carat-d ui-btn-icon-notext button-icon"></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </script>
     </body>
 </html>
