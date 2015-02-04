@@ -1,5 +1,6 @@
 function capturePhoto(){
-    navigator.camera.getPicture(uploadPhoto,null,{sourceType:1,quality:60});
+    //navigator.camera.getPicture(uploadPhoto,null,{sourceType:1,quality:60});
+navigator.camera.getPicture(uploadPhoto, null, { quality:50, destinationType:Camera.DestinationType.DATA_URL });
 }
 
 function uploadPhoto(data){
@@ -9,9 +10,9 @@ function uploadPhoto(data){
 	// Successful upload to the server
 	navigator.notification.alert(
 		'Your Photo has been uploaded',  // message
-		okay,                           // callback
-	    'Photo Uploaded',              // title
-	    'OK'                          // buttonName
+		okay,                            // callback
+	    'Photo Uploaded',                // title
+	    'OK'                             // buttonName
 	);
 
 	// upload has failed Fail
