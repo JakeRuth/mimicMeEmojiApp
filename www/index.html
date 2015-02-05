@@ -61,15 +61,13 @@
 				</div>
 			
 				 <div data-role="main" class="ui-content">
-					<!--<p>Camera stuff</p>
+					<p>Camera stuff</p>					
 					 <div style="position: relative; height: 400px;  text-align:center;margin:10px; border: 1px solid red;">
 						<img id="cameraPic" src="" style="width:auto; max-height:100%;;"></img>
 					</div>					
 					<div style="bottom: 0;width: 50%; margin-left: auto; margin-right: auto;">
 						<button class="ui-btn ui-corner-all" onclick="capturePhoto();">Take a Picture</button>
-					</div>-->
-                     <input type="button" value="Take a picture" onclick="onTakePicture();" />
-                     <canvas id="camera" width="352" height="288" style="border:2px"></canvas>
+					</div>				
 				</div>
 			</div>
 
@@ -93,66 +91,6 @@
                         </td>
                     </tr>
                 </tbody>
-            </script>
-
-            <script>
-                document.addEventListener("deviceready", function() {
-                    canvasMain = document.getElementById("camera");
-                    CanvasCamera.initialize(canvasMain);
-                    // define options
-                    var opt = {
-                        quality: 75,
-                        destinationType: CanvasCamera.DestinationType.DATA_URL,
-                        encodingType: CanvasCamera.EncodingType.JPEG,
-                        saveToPhotoAlbum:true,
-                        correctOrientation:true,
-                        width:640,
-                        height:480
-                    };
-                    CanvasCamera.start(opt);
-                });
-
-                /*function onChangeDevicePosition() {
-
-                    var newDevicePosition = CanvasCamera.CameraPosition.BACK;
-                    if (document.getElementById("deviceposition_back").checked)
-                    {
-                        newDevicePosition = CanvasCamera.CameraPosition.BACK;
-                    }
-                    else if (document.getElementById("deviceposition_front").checked)
-                    {
-                        newDevicePosition = CanvasCamera.CameraPosition.FRONT;
-                    }
-                    //
-                    CanvasCamera.setCameraPosition(newDevicePosition);
-                }
-
-                function onChangeFlashMode() {
-
-                    var newFlashMode = CanvasCamera.FlashMode.OFF;
-                    if (document.getElementById("flashmode_off").checked)
-                    {
-                        newFlashMode = CanvasCamera.FlashMode.OFF;
-                    }
-                    else if (document.getElementById("flashmode_on").checked)
-                    {
-                        newFlashMode = CanvasCamera.FlashMode.ON;
-                    }
-                    else if (document.getElementById("flashmode_auto").checked)
-                    {
-                        newFlashMode = CanvasCamera.FlashMode.AUTO;
-                    }
-
-                    CanvasCamera.setFlashMode(newFlashMode);
-                }*/
-
-                function onTakePicture() {
-                    CanvasCamera.takePicture(onTakeSuccess);
-                }
-
-                function onTakeSuccess(data) {
-                    //
-                }
             </script>
     </body>
 </html>
