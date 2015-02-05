@@ -1,12 +1,7 @@
 
 
 function capturePhoto(){
-	navigator.camera.getPicture(uploadPhoto, null, 
-		{ quality:50, 
-		destinationType:Camera.DestinationType.DATA_URL, 
-		//targetWidth: 480, 
-		//targetHeightt: 378, 
-		correctOrientation: true; });
+	navigator.camera.getPicture(uploadPhoto, null, { quality:50, destinationType:Camera.DestinationType.DATA_URL, correctOrientation: true });
 }
 
 function uploadPhoto(data){
