@@ -1,7 +1,12 @@
 
 
 function capturePhoto(){
-	navigator.camera.getPicture(uploadPhoto, null, { quality:50, destinationType:Camera.DestinationType.DATA_URL });
+	navigator.camera.getPicture(uploadPhoto, null, 
+		{ quality:50, 
+		destinationType:Camera.DestinationType.DATA_URL, 
+		//targetWidth: 480, 
+		//targetHeightt: 378, 
+		correctOrientation: true; });
 }
 
 function uploadPhoto(data){
@@ -10,16 +15,14 @@ function uploadPhoto(data){
 	cameraPic.src = "data:image/jpeg;base64," + data;
 	// Successful upload to the server
 	navigator.notification.alert(
-		'Your Photo has been uploaded',  // message
+		'Your Photo has been captured!',  // message
 		okay,                            // callback
-	    'Photo Uploaded',                // title
+	    'Photo Status',                // title
 	    'OK'                             // buttonName
 	);
 
 	// upload has failed Fail
-
 	/* 
-
 	if (failedToUpload){
 
 	navigator.notification.alert(
@@ -28,7 +31,6 @@ function uploadPhoto(data){
 	    'Photo Not Uploaded',
 	    'OK'
 		);
-
 	} 
 	*/
 
